@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
-        navMeshAgent.enabled = false; // Deshabilitamos el NavMeshAgent para controlar el movimiento con físicas
+        // navMeshAgent.enabled = false; // Deshabilitamos el NavMeshAgent para controlar el movimiento con físicas
     
         player = GameObject.FindWithTag("Player"); // Buscamos el objeto jugador
     }

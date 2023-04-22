@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -41,7 +42,8 @@ public class PlayerMovement : MonoBehaviour
         sprinting,
         crouching,
     }
-
+    
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
