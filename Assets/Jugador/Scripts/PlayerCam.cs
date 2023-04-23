@@ -11,14 +11,14 @@ public class PlayerCam : MonoBehaviour
 
     float xRotation;
     float yRotation;
-    
+
     public void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-   
+
     private void Update()
     {
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
@@ -32,4 +32,6 @@ public class PlayerCam : MonoBehaviour
         orientation.rotation = Quaternion.Euler(0, yRotation, 0);
 
     }
+
 }
+

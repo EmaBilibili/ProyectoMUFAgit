@@ -5,20 +5,16 @@ using UnityEngine;
 
 public class CamaraManager : MonoBehaviour
 {
-    public Camera[] cameras;
+    
     public KeyCode switchKey = KeyCode.C;
     public KeyCode VolverOjoDominante = KeyCode.C;
     public GameObject[] objectsToDisable;
 
-    private int currentCameraIndex = 0;
-
+    
+    
     void Start()
     {
-        // desactivar todas las cámaras excepto la primera
-        for (int i = 1; i < cameras.Length; i++)
-        {
-            cameras[i].gameObject.SetActive(false);
-        }
+       
     }
 
     void Update()
@@ -33,10 +29,7 @@ public class CamaraManager : MonoBehaviour
             }
             
       
-            // cambiar de cámara
-            cameras[currentCameraIndex].gameObject.SetActive(false);
-            currentCameraIndex = (currentCameraIndex + 1) % cameras.Length;
-            cameras[currentCameraIndex].gameObject.SetActive(true);
+          
         }
         if (Input.GetKeyDown(VolverOjoDominante))
         {
@@ -45,9 +38,8 @@ public class CamaraManager : MonoBehaviour
                 obj.SetActive(true);
             }
 
-            cameras[currentCameraIndex].gameObject.SetActive(false);
-            currentCameraIndex = (currentCameraIndex + 1) % cameras.Length;
-            cameras[currentCameraIndex].gameObject.SetActive(true);
+          
         }
+        
     }
 }
