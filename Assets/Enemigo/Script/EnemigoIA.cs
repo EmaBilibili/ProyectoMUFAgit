@@ -13,6 +13,8 @@ public class EnemigoIA : MonoBehaviour
     private NavMeshAgent agent; // El componente NavMeshAgent
     private Transform playerTransform; // El transform del jugador
 
+    [SerializeField] private PlayerData playerData;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>(); // Obtenemos el componente NavMeshAgent del objeto
@@ -31,6 +33,7 @@ public class EnemigoIA : MonoBehaviour
             currentWaypointIndex++; // Avanzamos al siguiente punto de patrulla
             if (currentWaypointIndex >= waypoints.Length) // Si hemos llegado al final de la lista de puntos de patrulla
             {
+                playerData.lifes += 1;
                 currentWaypointIndex = 0; // Volvemos al primer punto de patrulla
             }
             agent.SetDestination(waypoints[currentWaypointIndex].position); // Establecemos el siguiente punto de patrulla como destino
@@ -49,6 +52,7 @@ public class EnemigoIA : MonoBehaviour
                 {
                     if (hitInfo.collider.gameObject.CompareTag("Player")) // Si el objeto detectado es el jugador
                     {
+                        
                         return true; // El jugador es visible
                     }
                 }
