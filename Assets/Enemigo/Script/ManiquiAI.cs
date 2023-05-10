@@ -13,17 +13,31 @@ public class ManiquiAI : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         lastPlayerPosition = player.position;
+        //Rigidbody rb = GetComponent<Rigidbody>();
+        
     }
 
     void Update()
     {
-        // Si el jugador se mueve, actualizar su última posición conocida
-        if (player.position != lastPlayerPosition)
+        if (ConeCollider.maniquiDetectado)
         {
-            lastPlayerPosition = player.position;
+            navMeshAgent.isStopped = true; // Detener el objeto de inmediato
+            navMeshAgent.SetDestination(player.position); // Establecer el destino en la posición actual del jugador
         }
 
-        // Establecer la posición del objetivo como la última posición conocida del jugador
-        navMeshAgent.SetDestination(lastPlayerPosition);
+        else
+        {
+            ConeCollider.maniquiDetectado = false;
+            navMeshAgent.isStopped = false; // Permitir que el objeto siga moviéndose
+            moveManiqui(); 
+        }
+        
+    }
+
+    private void moveManiqui()
+    {
+        
+        // Establecer la posición del objetivo como la posición actual del jugador
+        navMeshAgent.SetDestination(player.position);
     }
 }
