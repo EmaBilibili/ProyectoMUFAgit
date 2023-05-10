@@ -9,12 +9,13 @@ public class CamaraManager : MonoBehaviour
     public KeyCode switchKey = KeyCode.C;
     public KeyCode VolverOjoDominante = KeyCode.C;
     public GameObject[] objectsToDisable;
+    
 
     
     
     void Start()
     {
-       
+        
     }
 
     void Update()
@@ -37,9 +38,7 @@ public class CamaraManager : MonoBehaviour
             {
                 obj.SetActive(true);
             }
-
-          
         }
-        
+            
     }
 }
