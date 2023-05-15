@@ -25,6 +25,7 @@ public class OpenDoor : MonoBehaviour
         if (open) //puerta abierta
         {
             transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, openRot, Time.deltaTime * smooth);
+            // cerrarPuerteAuto();
         }
         else // puerta cerrada
         {
@@ -34,7 +35,17 @@ public class OpenDoor : MonoBehaviour
         {
             open = !open;
         }
+
+        
     }
+
+    // IEnumerator cerrarPuerteAuto()
+    // {
+    //     Debug.Log("abierto");
+    //     yield return new WaitForSeconds(2);
+    //     Debug.Log("cerrando");
+    //     transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, defaultRot, Time.deltaTime * smooth);
+    // }
 
     private void OnGUI()
     {
@@ -62,5 +73,6 @@ public class OpenDoor : MonoBehaviour
             enter = false;
         }
     }
+    
 }
 

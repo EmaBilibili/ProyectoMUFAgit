@@ -7,13 +7,13 @@ public class EnemigoIA : MonoBehaviour
 {
     public float viewRadius; // El radio de visión del enemigo
     public float viewAngle; // El ángulo de visión del enemigo
-    public float speed; // La velocidad de movimiento del enemigo
+    //public float speed; // La velocidad de movimiento del enemigo
     public Transform[] waypoints; // Los puntos de patrulla
     private int currentWaypointIndex = 0; // El índice del punto de patrulla actual
     private NavMeshAgent agent; // El componente NavMeshAgent
     private Transform playerTransform; // El transform del jugador
 
-    [SerializeField] private PlayerData playerData;
+    // [SerializeField] private PlayerData playerData;
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class EnemigoIA : MonoBehaviour
             currentWaypointIndex++; // Avanzamos al siguiente punto de patrulla
             if (currentWaypointIndex >= waypoints.Length) // Si hemos llegado al final de la lista de puntos de patrulla
             {
-                playerData.lifes += 1;
+                // playerData.lifes += 1;
                 currentWaypointIndex = 0; // Volvemos al primer punto de patrulla
             }
             agent.SetDestination(waypoints[currentWaypointIndex].position); // Establecemos el siguiente punto de patrulla como destino
