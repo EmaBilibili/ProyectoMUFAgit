@@ -11,15 +11,15 @@ public class EnemigoIA : MonoBehaviour
     public Transform[] waypoints; // Los puntos de patrulla
     private int currentWaypointIndex = 0; // El índice del punto de patrulla actual
     private NavMeshAgent agent; // El componente NavMeshAgent
-    private Transform playerTransform; // El transform del jugador
+    public Transform playerTransform; // El transform del jugador
 
     // [SerializeField] private PlayerData playerData;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>(); // Obtenemos el componente NavMeshAgent del objeto
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform; // Buscamos el objeto del jugador en la escena
-        agent.SetDestination(waypoints[currentWaypointIndex].position); // Establecemos el primer punto de patrulla como destino
+        //playerTransform = GameObject.FindGameObjectWithTag("Player").transform; // Buscamos el objeto del jugador en la escena
+        //agent.SetDestination(waypoints[currentWaypointIndex].position); // Establecemos el primer punto de patrulla como destino
     }
 
     void Update()
@@ -50,7 +50,7 @@ public class EnemigoIA : MonoBehaviour
             {
                 if (Physics.Raycast(transform.position, dirToPlayer, out RaycastHit hitInfo, viewRadius)) // Si no hay obstáculos entre el enemigo y el jugador
                 {
-                    if (hitInfo.collider.gameObject.CompareTag("Player")) // Si el objeto detectado es el jugador
+                    if(hitInfo.collider.gameObject.transform == playerTransform) // Si el objeto detectado es el jugador
                     {
                         
                         return true; // El jugador es visible
