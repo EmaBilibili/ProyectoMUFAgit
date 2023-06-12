@@ -38,4 +38,10 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Salir del juego");
         Application.Quit();
     }
+
+    public void PlayMenu()
+    {
+        Debug.Log("Regresando al Menu ");
+        SceneManager.LoadScene("MainMenu");
+    }
 }

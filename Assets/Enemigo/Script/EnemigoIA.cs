@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemigoIA : MonoBehaviour
 {
@@ -78,6 +79,14 @@ public class EnemigoIA : MonoBehaviour
         for (int i = 0; i < waypoints.Length; i++)
         {
             Gizmos.DrawSphere(waypoints[i].position, 0.2f);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.transform == playerTransform)
+        {
+            SceneManager.LoadScene("Perdiste");
         }
     }
 }
