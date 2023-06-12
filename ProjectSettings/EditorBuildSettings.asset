@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/IntentoIA2.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Menu/Main Menu/MainMenu.unity
+    guid: 388a36f3e8779044a918db7ae7750e77
+  - enabled: 1
+    path: Assets/Scenes/Main Scene/escena/MainScene.unity
+    guid: 1674e41e0a6165040b3e33e85238f5ef
   m_configObjects: {}
