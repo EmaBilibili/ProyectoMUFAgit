@@ -53,7 +53,7 @@ public class EnemigoIA : MonoBehaviour
                 {
                     if(hitInfo.collider.gameObject.transform == playerTransform) // Si el objeto detectado es el jugador
                     {
-                        
+                        Debug.Log("jugador detectado");
                         return true; // El jugador es visible
                     }
                 }
