@@ -31,6 +31,8 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("cargando juego");
         SceneManager.LoadScene("MainScene");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void ExitGame()
@@ -43,5 +45,8 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("Regresando al Menu ");
         SceneManager.LoadScene("MainMenu");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
     }
 }

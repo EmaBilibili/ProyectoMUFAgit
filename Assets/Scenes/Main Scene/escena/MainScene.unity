@@ -3620,6 +3620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 877723390}
+  otherCanvas: {fileID: 877723390}
 --- !u!1 &600332034
 GameObject:
   m_ObjectHideFlags: 0
@@ -10301,6 +10302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 877723390}
+  otherCanvas: {fileID: 0}
 --- !u!1 &1718191440
 GameObject:
   m_ObjectHideFlags: 0
@@ -11302,6 +11304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuCanvas: {fileID: 1954180562}
+  otherCanvas: {fileID: 0}
 --- !u!114 &1954180565
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -87,6 +87,8 @@ public class EnemigoIA : MonoBehaviour
         if (other.transform == playerTransform)
         {
             SceneManager.LoadScene("Perdiste");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

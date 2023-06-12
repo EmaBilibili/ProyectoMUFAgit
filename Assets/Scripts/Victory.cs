@@ -11,7 +11,9 @@ public class Victory : MonoBehaviour
     {
         if (other.transform == llave)
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("Ganaste");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
