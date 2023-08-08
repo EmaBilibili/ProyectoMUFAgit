@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueScript : MonoBehaviour
+public class DialogueNotes : MonoBehaviour
 {
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TMP_Text dialogueText;
@@ -12,9 +12,8 @@ public class DialogueScript : MonoBehaviour
     private bool didDialogueStar;
     private int lineIndex;
     private bool isPlayerInRange;
-    private float typingTime;
+    [SerializeField]private float typingTime;
     
-
     private void Update()
     {
         if (isPlayerInRange && Input.GetButtonDown("Fire1"))
@@ -30,7 +29,6 @@ public class DialogueScript : MonoBehaviour
         }
          
     }
-
     private void startDialogue()
     {
         didDialogueStar = true;
@@ -39,7 +37,6 @@ public class DialogueScript : MonoBehaviour
         Time.timeScale = 0f;
         StartCoroutine(ShowLine());
     }
-
     private void nextDialogueLine()
     {
         lineIndex++;
@@ -52,9 +49,9 @@ public class DialogueScript : MonoBehaviour
             didDialogueStar = false;
             dialoguePanel.SetActive(false);
             Time.timeScale = 1f;
+            Destroy(gameObject);
         }
     }
-
     private IEnumerator ShowLine()
     {
         dialogueText.text = string.Empty;
@@ -64,12 +61,15 @@ public class DialogueScript : MonoBehaviour
             yield return new WaitForSecondsRealtime(typingTime);
         }
     }
-
     private void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            if (!didDialogueStar)
+            {
+                startDialogue();
+            }
         }
     }
     private void OnTriggerExit(Collider collision)

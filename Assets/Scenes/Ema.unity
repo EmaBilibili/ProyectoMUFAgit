@@ -670,6 +670,7 @@ MonoBehaviour:
   dialogueLines:
   - Pelado
   - Puto
+  typingTime: 0.05
 --- !u!54 &827050876
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -977,7 +978,7 @@ GameObject:
   - component: {fileID: 943142625}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1105,7 +1106,7 @@ GameObject:
   - component: {fileID: 1310742731}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
