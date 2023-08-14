@@ -17007,8 +17007,8 @@ MonoBehaviour:
   sensX: 400
   sensY: 400
   orientation: {fileID: 846008997}
-  bobAmount: 0.05
-  bobSpeed: 1.5
+  bobAmount: 0.08
+  bobSpeed: 5
   playerMovement: {fileID: 1628489775}
 --- !u!114 &2086126067
 MonoBehaviour:
