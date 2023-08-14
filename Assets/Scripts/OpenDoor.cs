@@ -12,13 +12,13 @@ public class OpenDoor : MonoBehaviour
     private Vector3 defaultRot;
     private Vector3 openRot;
 
+    [SerializeField]public bool isUnlocked;
     
     void Start()
     {
         defaultRot = transform.eulerAngles;
         openRot = new Vector3(defaultRot.x, defaultRot.y + DoorOpenAngle, defaultRot.z);
     }
-
     // Funcion principal
     void Update()
     {
@@ -31,22 +31,11 @@ public class OpenDoor : MonoBehaviour
         {
             transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, defaultRot, Time.deltaTime * smooth);
         }
-        if (Input.GetKeyDown(KeyCode.F) && enter)
+        if (Input.GetKeyDown(KeyCode.F) && enter && isUnlocked==true)
         {
             open = !open;
         }
-
-        
     }
-
-    // IEnumerator cerrarPuerteAuto()
-    // {
-    //     Debug.Log("abierto");
-    //     yield return new WaitForSeconds(2);
-    //     Debug.Log("cerrando");
-    //     transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, defaultRot, Time.deltaTime * smooth);
-    // }
-
     private void OnGUI()
     {
         if (enter)
@@ -54,9 +43,7 @@ public class OpenDoor : MonoBehaviour
             GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 150, 30), "F Para abrir");
         }
     }
-
     // Activa la funcion principal cuando el personaje esta cerca de la puerta 
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
@@ -64,7 +51,6 @@ public class OpenDoor : MonoBehaviour
             enter = true;
         }
     }
-
     // Desaciva la funcion principal cuando el personaje se aleja de la puerta
     private void OnTriggerExit(Collider other)
     {
@@ -73,6 +59,5 @@ public class OpenDoor : MonoBehaviour
             enter = false;
         }
     }
-    
 }
 
