@@ -6,6 +6,7 @@ using UnityEngine;
 public class KeyScript : MonoBehaviour
 {
     public OpenDoor openDoor;
+    public DialogueNotes dialogueNotes;
     private bool isInRange = false;
 
     private void Update()
@@ -14,6 +15,7 @@ public class KeyScript : MonoBehaviour
         {
             openDoor.isUnlocked = true;
             Destroy(gameObject);
+            Destroy(dialogueNotes);
         }
     }
 

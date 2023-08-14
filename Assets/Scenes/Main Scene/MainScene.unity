@@ -1489,6 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openDoor: {fileID: 979627417}
+  dialogueNotes: {fileID: 834859989}
 --- !u!65 &142108750
 BoxCollider:
   m_ObjectHideFlags: 0
