@@ -13600,7 +13600,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628489774}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 1, z: -2.8900003}
+  m_LocalPosition: {x: 1.21, y: 1, z: -7.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15223,7 +15223,7 @@ PrefabInstance:
     - target: {fileID: 5146262643565560687, guid: a2d94fbfcc52ad34a8485bc94b0d0bc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.98
+      value: -9.26
       objectReference: {fileID: 0}
     - target: {fileID: 5146262643565560687, guid: a2d94fbfcc52ad34a8485bc94b0d0bc3,
         type: 3}
@@ -16953,7 +16953,6 @@ GameObject:
   - component: {fileID: 2086126067}
   - component: {fileID: 2086126066}
   - component: {fileID: 2086126065}
-  - component: {fileID: 2086126070}
   - component: {fileID: 2086126071}
   m_Layer: 0
   m_Name: Main Camera R
@@ -17008,6 +17007,9 @@ MonoBehaviour:
   sensX: 400
   sensY: 400
   orientation: {fileID: 846008997}
+  bobAmount: 0.05
+  bobSpeed: 1.5
+  playerMovement: {fileID: 1628489775}
 --- !u!114 &2086126067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17084,19 +17086,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!65 &2086126070
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2086126063}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5819194, y: 1, z: 0.7918539}
-  m_Center: {x: -0.08324298, y: 0, z: 0.069419384}
 --- !u!81 &2086126071
 AudioListener:
   m_ObjectHideFlags: 0
