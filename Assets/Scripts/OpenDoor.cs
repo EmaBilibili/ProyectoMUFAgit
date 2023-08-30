@@ -14,10 +14,19 @@ public class OpenDoor : MonoBehaviour
 
     [SerializeField]public bool isUnlocked;
     
+    private AudioSource openSound; // Agregado: referencia al componente AudioSource
+    private AudioSource closeSound; // Agregado: referencia al segundo AudioSource para cerrar
+    
     void Start()
     {
         defaultRot = transform.eulerAngles;
         openRot = new Vector3(defaultRot.x, defaultRot.y + DoorOpenAngle, defaultRot.z);
+        
+        // Agregado: obtener referencia al componente AudioSource
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        openSound = audioSources[0];
+        closeSound = audioSources[1];
+        
     }
     // Funcion principal
     void Update()
@@ -34,6 +43,14 @@ public class OpenDoor : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && enter && isUnlocked==true)
         {
             open = !open;
+            if (open)
+            {
+                openSound.Play();
+            }
+            else
+            {
+                closeSound.Play(); // Agregado: reproducir el sonido de cerrar puerta
+            }
         }
     }
     private void OnGUI()
