@@ -11750,7 +11750,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 3feb4f34dfee2394197da45cca594697, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 2a331519b85de744099927685b5a5740, type: 2}
 --- !u!1001 &1603358298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15062,6 +15062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Principal V1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aa1d0326399796d4c99b5dd619d5344a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa1d0326399796d4c99b5dd619d5344a, type: 3}
