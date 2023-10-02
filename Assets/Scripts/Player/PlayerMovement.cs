@@ -36,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
 
     public Movementstate state;
+    
+    //private Animator anim;  En variables//
     public enum Movementstate
     {
         walking,
@@ -50,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
         rb.freezeRotation = true;
 
         startYScale = transform.localScale.y;
+        
+        //anim = GetComponent<Animator>(); en Start()//
     }
 
     private void Update()
@@ -119,6 +123,8 @@ public class PlayerMovement : MonoBehaviour
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInout;
         rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        
+        //anim.SetBool("IsWalking", isWalking); en fixedUpdate o en un metodo de movimiento//
     }
 
     private void SpeedController()
