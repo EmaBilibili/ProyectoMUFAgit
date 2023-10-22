@@ -2967,7 +2967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 470138, guid: dc8f3955c063af240afd23143f496335, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 470138, guid: dc8f3955c063af240afd23143f496335, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8609,7 +8609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 470138, guid: dc8f3955c063af240afd23143f496335, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 470138, guid: dc8f3955c063af240afd23143f496335, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10349,90 +10349,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 747236002}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &754731044
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2103118022}
-    m_Modifications:
-    - target: {fileID: 33394556566332742, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_Name
-      value: SocketLightSwitches
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.5616367
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.1217678
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.044759
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071079
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.70710576
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 857c45922f99d9d44adafd3c0f9e92e3, type: 3}
 --- !u!1001 &756572103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10570,9 +10486,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 906974100}
   - {fileID: 181707892}
   - {fileID: 628011114}
-  - {fileID: 906974100}
   - {fileID: 1341132210}
   - {fileID: 88137008}
   - {fileID: 1212905261}
@@ -10835,7 +10751,7 @@ PrefabInstance:
     - target: {fileID: 6920464969146356720, guid: dd6d859710ee96a4ab41394602a3257f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.84
+      value: -4.8197355
       objectReference: {fileID: 0}
     - target: {fileID: 6920464969146356720, guid: dd6d859710ee96a4ab41394602a3257f,
         type: 3}
@@ -11769,15 +11685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e4c9cb7501dd54e8ddad24c98489c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1196866101}
-  dialogueText: {fileID: 248702321}
-  dialogueLines:
-  - Parece que esta cerrada.
-  - "Tendr\xE9 que buscar la llave."
-  didDialogueStar: 0
-  lineIndex: 0
-  isPlayerInRange: 0
-  typingTime: 0.05
 --- !u!65 &801637796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12274,16 +12181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e4c9cb7501dd54e8ddad24c98489c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1196866101}
-  dialogueText: {fileID: 248702321}
-  dialogueLines:
-  - "Esta cerrada, es la sala de seguridad. Aqu\xED deberian estar todas las llaves
-    del lugar."
-  - "Tendr\xE9 que buscar la llave. Deberia investigar el resto de oficinas."
-  didDialogueStar: 0
-  lineIndex: 0
-  isPlayerInRange: 0
-  typingTime: 0.05
 --- !u!65 &834859990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13265,7 +13162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 470138, guid: dc8f3955c063af240afd23143f496335, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 470138, guid: dc8f3955c063af240afd23143f496335, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25702,12 +25599,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1702790245}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1703294469 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1703294469, guid: dc8f3955c063af240afd23143f496335,
-    type: 3}
-  m_PrefabInstance: {fileID: 906974099}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1713209382
 GameObject:
   m_ObjectHideFlags: 0
@@ -26485,15 +26376,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e4c9cb7501dd54e8ddad24c98489c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1196866101}
-  dialogueText: {fileID: 248702321}
-  dialogueLines:
-  - "\xA1He logrado entrar, por fin!"
-  - Ahora voy a investigar el lugar.
-  didDialogueStar: 0
-  lineIndex: 0
-  isPlayerInRange: 0
-  typingTime: 0.05
 --- !u!65 &1810082919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27635,47 +27517,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1883519715}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1884714536 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 33394556566332742, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 754731044}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1884714537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884714536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LightObject: {fileID: 1970594032}
-  ObjectToDisable: {fileID: 1703294469}
-  LightOnOff: 0
-  Light: 1
---- !u!65 &1884714538
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1884714536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.15, z: 0.025}
-  m_Center: {x: 0, y: 0, z: 0.014}
---- !u!4 &1884714539 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 33394556566332743, guid: 857c45922f99d9d44adafd3c0f9e92e3,
-    type: 3}
-  m_PrefabInstance: {fileID: 754731044}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1893223666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28429,6 +28270,7 @@ MonoBehaviour:
   ObjectToDisable: {fileID: 1519102885}
   LightOnOff: 0
   Light: 1
+  LighttimerDuration: 10
 --- !u!65 &1968281953
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28454,6 +28296,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 906974099}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1970594034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970594032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885feb3aaec0255498bd1e770583f3b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titila: 0
+  timeDelay: 0
 --- !u!1001 &1973880231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30436,7 +30292,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1884714539}
   - {fileID: 1968281951}
   m_Father: {fileID: 1983463072}
   m_RootOrder: 5

@@ -8,25 +8,56 @@ public class LightSwitcher : MonoBehaviour
     public GameObject ObjectToDisable;
     public bool LightOnOff;
     public bool Light;
+    public float LighttimerDuration = 5.0f; // Duración del temporizador en segundos
+
+    private bool isTimerActive;
 
     public void OnOffLight()
     {
         LightOnOff = !LightOnOff;
-        if (LightOnOff == true)
+        if (LightOnOff)
         {
             LightObject.SetActive(true);
             if (ObjectToDisable != null)
             {
-                ObjectToDisable.SetActive(true); // Activa el objeto cuando la luz está encendida
+                ObjectToDisable.SetActive(true);
             }
+            StartTimer();
         }
-        else if (LightOnOff == false)
+        else
         {
             LightObject.SetActive(false);
             if (ObjectToDisable != null)
             {
-                ObjectToDisable.SetActive(false); // Desactiva el objeto cuando la luz está apagada
+                ObjectToDisable.SetActive(false);
+            }
+            StopTimer();
+        }
+    }
+
+    private void StartTimer()
+    {
+        isTimerActive = true;
+        StartCoroutine(TurnOffLightAfterDelay());
+    }
+
+    private void StopTimer()
+    {
+        isTimerActive = false;
+    }
+
+    private IEnumerator TurnOffLightAfterDelay()
+    {
+        yield return new WaitForSeconds(LighttimerDuration);
+        if (isTimerActive)
+        {
+            LightOnOff = false;
+            LightObject.SetActive(false);
+            if (ObjectToDisable != null)
+            {
+                ObjectToDisable.SetActive(false);
             }
         }
     }
+    
 }
