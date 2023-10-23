@@ -49,4 +49,12 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
 
     }
+
+    public void PlayOptions()
+    {
+        Debug.Log("Ir a Opciones");
+        SceneManager.LoadScene("Options");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }
