@@ -9,12 +9,16 @@ public class PlayerController : MonoBehaviour
     public float gravity = 9.8f; // Gravedad
     private CharacterController characterController;
     private Transform playerCamera;
-    public string playerID;
+    
+    public AudioClip footstepsSound; // Asigna tu audio clip de pasos en el Inspector
+    private AudioSource audioSource;
+
 
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
         playerCamera = Camera.main.transform;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -40,5 +44,18 @@ public class PlayerController : MonoBehaviour
 
         // Aplica movimiento al personaje
         characterController.Move(moveDirection * moveSpeed * Time.deltaTime);
+        
+        if (moveDirection.magnitude > 0 && isGrounded)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = footstepsSound;
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            audioSource.Stop();
+        }
     }
 }
