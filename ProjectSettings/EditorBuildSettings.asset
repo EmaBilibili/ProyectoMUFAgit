@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/escena sotano/sotano.unity
     guid: 82fe708b32a959440bc4045414ff6be4
+  - enabled: 1
+    path: Assets/Menu/Options Menu/Options.unity
+    guid: 170e292d1e8ccc34e8d1db896288d895
   m_configObjects: {}
