@@ -4,94 +4,57 @@ using UnityEngine;
 
 public class OpenDoor : MonoBehaviour
 {
-    public float smooth;
-    public float DoorOpenAngle;
-    private bool open;
-    private bool enter;
+    private Animator doorAnimator;
+    private bool isPlayerNear = false;
+    private AudioSource doorAudioSource;
+    public AudioClip openSound;
+    public AudioClip closeSound;
 
-    private Vector3 defaultRot;
-    private Vector3 openRot;
-
-    [SerializeField] public bool isUnlocked;
-
-    private AudioSource audioSource; // Referencia al componente AudioSource
-    
-    // Define las variables para los sonidos de apertura y cierre
-    public AudioClip OpenDoorSound;
-    public AudioClip CloseDoorSound;
-    
-    private bool previousOpenState = false; // Variable para rastrear el estado anterior
-
-    void Start()
+    private void Start()
     {
-        defaultRot = transform.eulerAngles;
-        openRot = new Vector3(defaultRot.x, defaultRot.y + DoorOpenAngle, defaultRot.z);
-
-        // Obtén una referencia al componente AudioSource en este objeto
-        audioSource = GetComponent<AudioSource>();
+        doorAnimator = GetComponent<Animator>();
+        doorAudioSource = GetComponent<AudioSource>();
     }
 
-    // Función principal
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && enter && isUnlocked == true)
+        if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
         {
-            open = !open;
-        
-            if (open) // Si la puerta se abre
+            if (doorAnimator.GetCurrentAnimatorStateInfo(0).IsName("Close"))
             {
-                // Reproduce el sonido de apertura solo si la puerta estaba cerrada anteriormente
-                if (!previousOpenState)
-                {
-                    audioSource.PlayOneShot(OpenDoorSound);
-                }
+                doorAnimator.SetTrigger("Open");
+                PlaySound(openSound);
             }
-            else // Si la puerta se cierra
+            else if (doorAnimator.GetCurrentAnimatorStateInfo(0).IsName("Open"))
             {
-                // Reproduce el sonido de cierre solo si la puerta estaba abierta anteriormente
-                if (previousOpenState)
-                {
-                    audioSource.PlayOneShot(CloseDoorSound);
-                }
+                doorAnimator.SetTrigger("Close");
+                PlaySound(closeSound);
             }
-            previousOpenState = open; // Actualiza el estado anterior
-        }
-
-        if (open) // puerta abierta
-        {
-            transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, openRot, Time.deltaTime * smooth);
-        }
-        else // puerta cerrada
-        {
-            transform.eulerAngles = Vector3.Slerp(transform.eulerAngles, defaultRot, Time.deltaTime * smooth);
         }
     }
 
-
-    private void OnGUI()
-    {
-        if (enter)
-        {
-            GUI.Label(new Rect(Screen.width / 2 - 75, Screen.height - 100, 150, 30), "E Para abrir");
-        }
-    }
-
-    // Activa la función principal cuando el personaje está cerca de la puerta
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            enter = true;
+            isPlayerNear = true;
         }
     }
 
-    // Desactiva la función principal cuando el personaje se aleja de la puerta
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.CompareTag("Player"))
         {
-            enter = false;
+            isPlayerNear = false;
+        }
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (clip != null)
+        {
+            doorAudioSource.clip = clip;
+            doorAudioSource.Play();
         }
     }
 }
-

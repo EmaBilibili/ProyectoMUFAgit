@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = 9.8f; // Gravedad
     private CharacterController characterController;
     private Transform playerCamera;
+    public string playerID;
 
     private void Start()
     {
