@@ -9,6 +9,7 @@ TagManager:
   - Object
   - Grabbable
   - DoorCollider
+  - Light
   layers:
   - Default
   - TransparentFX
