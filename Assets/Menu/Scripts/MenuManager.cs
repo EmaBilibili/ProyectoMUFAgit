@@ -55,6 +55,6 @@ public class MenuManager : MonoBehaviour
         Debug.Log("Ir a Opciones");
         SceneManager.LoadScene("Options");
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
