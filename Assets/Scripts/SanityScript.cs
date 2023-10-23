@@ -4,23 +4,24 @@ using UnityEngine.UI;
 public class SanityScript : MonoBehaviour
 {
     public Image madnessImage;
-    public float initialMadness = 1.0f;
-    public float madnessReductionRate = 0.2f;
-    public float madnessIncreaseRate = 0.1f;
-    public float madnessActivationThreshold = 0.8f;
-    public GameObject enemy;
-    public AudioSource externalAudioSource; // Referencia al AudioSource de otro objeto
+    public float initialMadness = 1.0f;  // Valor de locura inicial (1 representa locura alta)
+    public float madnessReductionRate = 0.2f;  // Tasa de reducción de locura por segundo cuando está en la luz
+    public float madnessIncreaseRate = 0.1f; // Tasa de aumento de locura por segundo cuando no está en la luz
+    public float madnessActivationThreshold = 0.8f;  // Umbral de locura para activar el enemigo
+    public GameObject enemy;  // El enemigo que quieres activar
 
     private float currentMadness;
     private bool isTouchingLight;
     private bool enemyActivated;
-    private bool isPlayingSound; // Controla si el sonido está reproduciéndose
+    
+    public AudioSource audioSourceSanity;
+    
+    public AudioClip audioClipSanity;
 
     private void Start()
     {
         currentMadness = initialMadness;
         enemyActivated = false;
-        isPlayingSound = false; // Inicialmente, el sonido no se está reproduciendo
         UpdateMadnessVisibility();
     }
 
@@ -38,7 +39,7 @@ public class SanityScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Light"))
+        if (other.CompareTag("Light")) // Ajusta la etiqueta según tu juego
         {
             isTouchingLight = true;
         }
@@ -46,7 +47,7 @@ public class SanityScript : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Light"))
+        if (other.CompareTag("Light")) // Ajusta la etiqueta según tu juego
         {
             isTouchingLight = false;
         }
@@ -55,49 +56,39 @@ public class SanityScript : MonoBehaviour
     void IncreaseMadness()
     {
         currentMadness += madnessIncreaseRate * Time.deltaTime;
-        currentMadness = Mathf.Clamp01(currentMadness);
+        currentMadness = Mathf.Clamp01(currentMadness);  // Asegura que la locura esté entre 0 y 1
         UpdateMadnessVisibility();
-
-        // Comprueba si la locura ha alcanzado el umbral y el sonido no se está reproduciendo
-        if (currentMadness >= madnessActivationThreshold && !enemyActivated && !isPlayingSound)
-        {
-            Debug.Log("reproduciendo respiración");
-            externalAudioSource.loop = true; // Reproduce el sonido en loop desde el AudioSource externo
-            externalAudioSource.Play();
-            isPlayingSound = true;
-        }
     }
 
     void ReduceMadness()
     {
         currentMadness -= madnessReductionRate * Time.deltaTime;
-        currentMadness = Mathf.Clamp01(currentMadness);
+        currentMadness = Mathf.Clamp01(currentMadness);  // Asegura que la locura esté entre 0 y 1
         UpdateMadnessVisibility();
-
-        // Si la locura disminuye a un nivel en el que debes detener el sonido
-        if (currentMadness < madnessActivationThreshold && isPlayingSound)
-        {
-            Debug.Log("quitando respiración");
-            externalAudioSource.Stop(); // Detén el sonido en el AudioSource externo
-            isPlayingSound = false;
-        }
     }
 
     void UpdateMadnessVisibility()
     {
+        // Actualiza la visibilidad de la imagen según la locura
         Color imageColor = madnessImage.color;
-        imageColor.a = currentMadness;
+        imageColor.a = currentMadness; // Hace que la imagen sea más visible a medida que la locura aumenta
         madnessImage.color = imageColor;
 
         if (currentMadness >= madnessActivationThreshold && !enemyActivated)
         {
+            // La locura ha alcanzado el umbral, activa el enemigo
             enemy.SetActive(true);
             enemyActivated = true;
+            audioSourceSanity.Play();
+            Debug.Log("Sonido de Sanity reproducido.");
         }
         else if (currentMadness == 0)
         {
+            // La locura ha llegado a 0, desactiva el enemigo
             enemy.SetActive(false);
             enemyActivated = false;
+            audioSourceSanity.Stop();
+            Debug.Log("Sonido de Sanity reproducido.");
         }
     }
 }
