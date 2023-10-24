@@ -8,7 +8,7 @@ public class LightSwitcher : MonoBehaviour
     public GameObject ObjectToDisable;
     public bool LightOnOff;
     public bool Light;
-    public float LighttimerDuration = 5.0f; // Duración del temporizador en segundos
+    public float LighttimerDuration; // Duración del temporizador en segundos
 
     private bool isTimerActive;
 

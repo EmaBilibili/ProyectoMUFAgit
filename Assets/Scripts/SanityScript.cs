@@ -17,7 +17,7 @@ public class SanityScript : MonoBehaviour
     public AudioSource audioSourceSanity;
     
     public AudioClip audioClipSanity;
-
+    public LightSwitcher lightSwitcher;
     private void Start()
     {
         currentMadness = initialMadness;
@@ -41,6 +41,7 @@ public class SanityScript : MonoBehaviour
     {
         if (other.CompareTag("Light")) // Ajusta la etiqueta según tu juego
         {
+            Debug.Log("en la luz");
             isTouchingLight = true;
         }
     }
@@ -49,6 +50,7 @@ public class SanityScript : MonoBehaviour
     {
         if (other.CompareTag("Light")) // Ajusta la etiqueta según tu juego
         {
+            Debug.Log("en la oscuridad");
             isTouchingLight = false;
         }
     }
