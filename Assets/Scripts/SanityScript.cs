@@ -4,20 +4,21 @@ using UnityEngine.UI;
 public class SanityScript : MonoBehaviour
 {
     public Image madnessImage;
-    public float initialMadness = 1.0f;  // Valor de locura inicial (1 representa locura alta)
-    public float madnessReductionRate = 0.2f;  // Tasa de reducción de locura por segundo cuando está en la luz
-    public float madnessIncreaseRate = 0.1f; // Tasa de aumento de locura por segundo cuando no está en la luz
-    public float madnessActivationThreshold = 0.8f;  // Umbral de locura para activar el enemigo
-    public GameObject enemy;  // El enemigo que quieres activar
+    public float initialMadness = 1.0f;
+    public float madnessReductionRate = 0.2f;
+    public float madnessIncreaseRate = 0.1f;
+    public float madnessActivationThreshold = 0.8f;
+    public GameObject enemy;
+
+    public float lightRadius = 5.0f;
+    public LayerMask lightLayer;
 
     private float currentMadness;
-    private bool isTouchingLight;
     private bool enemyActivated;
     
     public AudioSource audioSourceSanity;
     
-    public AudioClip audioClipSanity;
-    public LightSwitcher lightSwitcher;
+
     private void Start()
     {
         currentMadness = initialMadness;
@@ -27,7 +28,7 @@ public class SanityScript : MonoBehaviour
 
     private void Update()
     {
-        if (isTouchingLight)
+        if (IsInLight())
         {
             ReduceMadness();
         }
@@ -37,60 +38,49 @@ public class SanityScript : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    bool IsInLight()
     {
-        if (other.CompareTag("Light")) // Ajusta la etiqueta según tu juego
-        {
-            Debug.Log("en la luz");
-            isTouchingLight = true;
-        }
-    }
+        // Realiza un raycast de esfera para detectar si el personaje está dentro del radio de una luz
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, lightRadius, lightLayer);
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Light")) // Ajusta la etiqueta según tu juego
-        {
-            Debug.Log("en la oscuridad");
-            isTouchingLight = false;
-        }
+        // Visualiza el raycast
+        Color rayColor = hitColliders.Length > 0 ? Color.green : Color.red;
+        Debug.DrawRay(transform.position, Vector3.up * lightRadius, rayColor);
+
+        return hitColliders.Length > 0;
     }
 
     void IncreaseMadness()
     {
         currentMadness += madnessIncreaseRate * Time.deltaTime;
-        currentMadness = Mathf.Clamp01(currentMadness);  // Asegura que la locura esté entre 0 y 1
+        currentMadness = Mathf.Clamp01(currentMadness);
         UpdateMadnessVisibility();
     }
 
     void ReduceMadness()
     {
         currentMadness -= madnessReductionRate * Time.deltaTime;
-        currentMadness = Mathf.Clamp01(currentMadness);  // Asegura que la locura esté entre 0 y 1
+        currentMadness = Mathf.Clamp01(currentMadness);
         UpdateMadnessVisibility();
     }
 
     void UpdateMadnessVisibility()
     {
-        // Actualiza la visibilidad de la imagen según la locura
         Color imageColor = madnessImage.color;
-        imageColor.a = currentMadness; // Hace que la imagen sea más visible a medida que la locura aumenta
+        imageColor.a = currentMadness;
         madnessImage.color = imageColor;
 
         if (currentMadness >= madnessActivationThreshold && !enemyActivated)
         {
-            // La locura ha alcanzado el umbral, activa el enemigo
             enemy.SetActive(true);
             enemyActivated = true;
             audioSourceSanity.Play();
-            Debug.Log("Sonido de Sanity reproducido.");
         }
         else if (currentMadness == 0)
         {
-            // La locura ha llegado a 0, desactiva el enemigo
             enemy.SetActive(false);
             enemyActivated = false;
             audioSourceSanity.Stop();
-            Debug.Log("Sonido de Sanity reproducido.");
         }
     }
 }
