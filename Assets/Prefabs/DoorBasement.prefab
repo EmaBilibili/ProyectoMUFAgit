@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 979247015104464550}
   - component: {fileID: 4195420182889810179}
   - component: {fileID: 2152112748697632201}
+  - component: {fileID: 2498747798413004445}
   m_Layer: 0
   m_Name: BWall_1
   m_TagString: Untagged
@@ -83,6 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2498747798413004445
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 494599175067507740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: 2b7f6ff1c787c5f4dab9e84bee66bd96, type: 3}
 --- !u!1 &2179508205945499567
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,6 +359,7 @@ GameObject:
   - component: {fileID: 3094410875135549747}
   - component: {fileID: 3094410875135549757}
   - component: {fileID: 3094410875135549746}
+  - component: {fileID: 6468424821612654936}
   m_Layer: 0
   m_Name: BWall
   m_TagString: Untagged
@@ -416,6 +432,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6468424821612654936
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3094410875135549744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -462981019419857548, guid: 2b7f6ff1c787c5f4dab9e84bee66bd96, type: 3}
 --- !u!1 &3094410875239502581
 GameObject:
   m_ObjectHideFlags: 0
