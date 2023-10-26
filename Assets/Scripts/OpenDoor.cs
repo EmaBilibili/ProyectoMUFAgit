@@ -9,11 +9,20 @@ public class OpenDoor : MonoBehaviour
     private AudioSource doorAudioSource;
     public AudioClip openSound;
     public AudioClip closeSound;
+    
+    //MENSAJE EN PANTALLA//
+    public string interactionMessage = "Pulsa 'E' para abrir la puerta";
+    private GUIStyle messageStyle;
 
     private void Start()
     {
         doorAnimator = GetComponent<Animator>();
         doorAudioSource = GetComponent<AudioSource>();
+        
+        // MENSAJE EN PANTALLA//
+        messageStyle = new GUIStyle();
+        messageStyle.fontSize = 34; // Tamaño de fuente
+        messageStyle.normal.textColor = Color.white; // Color del texto
     }
 
     private void Update()
@@ -30,6 +39,18 @@ public class OpenDoor : MonoBehaviour
                 doorAnimator.SetTrigger("Close");
                 PlaySound(closeSound);
             }
+        }
+    }
+    
+    // MENSAJE EN PANTALLA//
+    private void OnGUI()
+    {
+        if (isPlayerNear)
+        {
+            Vector2 textSize = messageStyle.CalcSize(new GUIContent(interactionMessage));
+            float textX = (Screen.width - textSize.x) / 2;
+            float textY = Screen.height - textSize.y - 10; // Ajusta la posición vertical según tus necesidades
+            GUI.Label(new Rect(textX, textY, textSize.x, textSize.y), interactionMessage, messageStyle);
         }
     }
 
