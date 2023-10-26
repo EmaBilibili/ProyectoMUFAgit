@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class ChangeEscene : MonoBehaviour
 {
-    public string sotano; // Nombre de la siguiente escena
+    public string sotano; 
 
         private void OnMouseDown()
         {
-            SceneManager.LoadScene(sotano); // Cargar la siguiente escena
+            SceneManager.LoadScene(sotano);
         }
 
     }
