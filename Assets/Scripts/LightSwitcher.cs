@@ -11,6 +11,9 @@ public class LightSwitcher : MonoBehaviour
     public float LighttimerDuration; // Duración del temporizador en segundos
 
     private bool isTimerActive;
+    
+    public AudioSource switchOnSound; // Referencia al componente de audio
+    public AudioSource switchOffSound;
 
     public void OnOffLight()
     {
@@ -22,6 +25,7 @@ public class LightSwitcher : MonoBehaviour
             {
                 ObjectToDisable.SetActive(true);
             }
+            PlaySwitchOnSound();
             StartTimer();
         }
         else
@@ -31,6 +35,7 @@ public class LightSwitcher : MonoBehaviour
             {
                 ObjectToDisable.SetActive(false);
             }
+            PlaySwitchOffSound(); 
             StopTimer();
         }
     }
@@ -44,6 +49,22 @@ public class LightSwitcher : MonoBehaviour
     private void StopTimer()
     {
         isTimerActive = false;
+    }
+    
+    private void PlaySwitchOnSound()
+    {
+        if (switchOnSound != null && switchOnSound.clip != null)
+        {
+            switchOnSound.Play();
+        }
+    }
+
+    private void PlaySwitchOffSound()
+    {
+        if (switchOffSound != null && switchOffSound.clip != null)
+        {
+            switchOffSound.Play();
+        }
     }
 
     private IEnumerator TurnOffLightAfterDelay()

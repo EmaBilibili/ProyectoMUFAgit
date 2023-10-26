@@ -21,38 +21,13 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 0.31
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.733
   rounded:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
---- !u!114 &-2657705633710370944
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
-  m_Name: MotionBlur
-  m_EditorClassIdentifier: 
-  active: 0
-  mode:
-    m_OverrideState: 1
-    m_Value: 0
-  quality:
-    m_OverrideState: 1
-    m_Value: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 1
-  clamp:
-    m_OverrideState: 1
-    m_Value: 0.074
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,9 +41,7 @@ MonoBehaviour:
   m_Name: PostProcessingCamera Profile
   m_EditorClassIdentifier: 
   components:
-  - {fileID: -2657705633710370944}
   - {fileID: 4582307442380618296}
-  - {fileID: 4975981023030951671}
   - {fileID: -4642817614844529997}
   - {fileID: 5885390190165237757}
 --- !u!114 &4582307442380618296
@@ -86,35 +59,19 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.44
   xMultiplier:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   yMultiplier:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 1
   center:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {x: 0.5, y: 0.5}
   scale:
     m_OverrideState: 1
-    m_Value: 1.2
---- !u!114 &4975981023030951671
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
-  m_Name: ChromaticAberration
-  m_EditorClassIdentifier: 
-  active: 0
-  intensity:
-    m_OverrideState: 1
-    m_Value: 1
+    m_Value: 1.1
 --- !u!114 &5885390190165237757
 MonoBehaviour:
   m_ObjectHideFlags: 3

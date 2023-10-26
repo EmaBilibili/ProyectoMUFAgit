@@ -9,6 +9,32 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 33394556566332743}
+  - component: {fileID: 1968281953}
+  - component: {fileID: 1968281952}
+  - component: {fileID: 885493208}
+  - component: {fileID: 885493207}
+  - component: {fileID: 244039249}
+  - component: {fileID: 244039248}
+  - component: {fileID: 1499653907}
+  - component: {fileID: 1499653906}
+  - component: {fileID: 337917407}
+  - component: {fileID: 337917406}
+  - component: {fileID: 150534989}
+  - component: {fileID: 150534988}
+  - component: {fileID: 1894555737}
+  - component: {fileID: 1894555736}
+  - component: {fileID: 1360237343}
+  - component: {fileID: 1360237342}
+  - component: {fileID: 1488494342}
+  - component: {fileID: 1488494341}
+  - component: {fileID: 2007099820}
+  - component: {fileID: 2007099819}
+  - component: {fileID: 279330575}
+  - component: {fileID: 279330574}
+  - component: {fileID: 1984953775}
+  - component: {fileID: 1984953774}
+  - component: {fileID: 447198654}
+  - component: {fileID: 447198653}
   m_Layer: 0
   m_Name: SocketLightSwitches
   m_TagString: Untagged
@@ -25,7 +51,7 @@ Transform:
   m_GameObject: {fileID: 33394556566332742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.24725, y: 3.14953, z: -10.458889}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 575367086666310928}
@@ -34,6 +60,422 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1968281953
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &1968281952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &885493208
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &885493207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &244039249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &244039248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &1499653907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &1499653906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &337917407
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &337917406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &150534989
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &150534988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &1894555737
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &1894555736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &1360237343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &1360237342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &1488494342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &1488494341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &2007099820
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &2007099819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &279330575
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &279330574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &1984953775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &1984953774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
+--- !u!65 &447198654
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.15, z: 0.025}
+  m_Center: {x: 0, y: 0, z: 0.014}
+--- !u!114 &447198653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33394556566332742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0354caa88b2a78041a28428101c0b503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LightObject: {fileID: 0}
+  ObjectToDisable: {fileID: 0}
+  LightOnOff: 0
+  Light: 1
+  LighttimerDuration: 30
+  switchOnSound: {fileID: 0}
+  switchOffSound: {fileID: 0}
 --- !u!1001 &33394557604141136
 PrefabInstance:
   m_ObjectHideFlags: 0

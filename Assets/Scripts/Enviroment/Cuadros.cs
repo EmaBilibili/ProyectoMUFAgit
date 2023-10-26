@@ -8,6 +8,8 @@ public class Cuadros : MonoBehaviour
     public float fuerza = 1000f;
 
     public Collider cuadroCollider; // Collider que deseas deshabilitar
+    
+    public AudioSource golpeSound; // Arrastra aquí el componente AudioSource desde el Inspector
 
     void Start()
     {
@@ -17,11 +19,22 @@ public class Cuadros : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player")) // Otra condición de activación
+        if (other.CompareTag("Player"))
         {
-            cuadro.isKinematic = false; // Permitir que las físicas afecten al cuadro
-            cuadro.AddForce(Vector3.right * fuerza); // Aplicar fuerza hacia la derecha
+            cuadro.isKinematic = false;
+        
+            // Obtén la dirección local hacia adelante del objeto
+            Vector3 localForward = transform.forward;
+        
+            // Aplica la fuerza en la dirección local
+            cuadro.AddForce(localForward * fuerza);
+
             cuadroCollider.enabled = false;
+
+            if (golpeSound != null)
+            {
+                golpeSound.Play(); // Reproduce el sonido de golpe si se asignó en el Inspector
+            }
         }
     }
 }
