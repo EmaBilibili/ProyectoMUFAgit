@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class Raycast : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class Raycast : MonoBehaviour
                     if (hit.collider.GetComponent<LightSwitcher>().Light == true)
                     {
                         hit.collider.GetComponent<LightSwitcher>().OnOffLight();
+
+                        
                     }
                 }
                 isLightSwitcherHit = true; // Marcar que el raycast ha golpeado el LightSwitcher
@@ -56,4 +59,6 @@ public class Raycast : MonoBehaviour
             GUI.Label(messageRect, "Presiona 'E' para interactuar", style);
         }
     }
+
+    
 }

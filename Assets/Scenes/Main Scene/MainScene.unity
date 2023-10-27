@@ -5916,7 +5916,7 @@ Transform:
   - {fileID: 1522405416}
   - {fileID: 1757463907}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &342398116
 PrefabInstance:
@@ -10656,10 +10656,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 672040107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a23833ca47913e419a67535cb1022db, type: 3}
+  m_Script: {fileID: 11500000, guid: 529a77a41c7011b44b3cee20400187b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sotano: sotano
+  sceneName: sotano
 --- !u!1001 &685450848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18535,7 +18535,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1171097784
 BoxCollider:
@@ -19219,8 +19219,8 @@ Transform:
   - {fileID: 147150010}
   - {fileID: 646785507}
   - {fileID: 159524454}
-  - {fileID: 2090218026}
   - {fileID: 663068068}
+  - {fileID: 2090218026}
   - {fileID: 182122651}
   - {fileID: 1249161334}
   - {fileID: 173395844}
@@ -19233,8 +19233,8 @@ Transform:
   - {fileID: 282083968}
   - {fileID: 1105463322}
   - {fileID: 92027965}
-  - {fileID: 2004640457}
   - {fileID: 313429101}
+  - {fileID: 2004640457}
   m_Father: {fileID: 1983463072}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32193,7 +32193,7 @@ Transform:
   - {fileID: 1336555353}
   - {fileID: 127108969}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1984953771
 PrefabInstance:
@@ -36739,7 +36739,7 @@ PrefabInstance:
     - target: {fileID: 8007793690731191576, guid: 36250d275fc91264da3c373f76928bee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8007793690731191576, guid: 36250d275fc91264da3c373f76928bee,
         type: 3}
