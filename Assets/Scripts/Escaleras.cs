@@ -8,6 +8,7 @@ public class Escaleras : MonoBehaviour
     public string sceneName; // Nombre de la escena a la que quieres cambiar
     private bool isPlayerNear = false; // Variable para saber si el jugador está cerca
 
+
     void Update()
     {
         if (isPlayerNear && Input.GetKeyDown(KeyCode.E))
