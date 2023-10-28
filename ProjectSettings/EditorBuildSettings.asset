@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Ganaste/FinalStory.unity
     guid: 574e1e47af230c94c8af3c8511dcddf8
+  - enabled: 1
+    path: Assets/Scenes/Menu/Perdiste/PerdisteSotano.unity
+    guid: c6275398994675e4e9515742d4bb4389
+  - enabled: 1
+    path: Assets/Scenes/Main Scene/MainScene2.unity
+    guid: 79fea673695f850498823d4e3ad94ebd
   m_configObjects: {}

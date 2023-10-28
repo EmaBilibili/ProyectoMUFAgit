@@ -34,6 +34,14 @@ public class MenuManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+    
+    public void PlaySotano()
+    {
+        Debug.Log("cargando juego");
+        SceneManager.LoadScene("sotano");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
     public void ExitGame()
     {
@@ -44,6 +52,7 @@ public class MenuManager : MonoBehaviour
     public void PlayMenu()
     {
         Debug.Log("Regresando al Menu ");
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;

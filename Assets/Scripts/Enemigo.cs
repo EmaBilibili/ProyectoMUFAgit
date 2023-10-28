@@ -103,5 +103,7 @@ public class Enemigo : MonoBehaviour
         // Carga la escena principal por su nombre o índice.
         // Asegúrate de que el nombre de la escena sea correcto.
         SceneManager.LoadScene(SceneName);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 }
