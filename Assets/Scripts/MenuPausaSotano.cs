@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+public class MenuPausaSotano : MonoBehaviour
 {
     public GameObject pauseMenuCanvas;
 
@@ -24,7 +24,9 @@ public class MenuManager : MonoBehaviour
         Time.timeScale = isPaused ? 0f : 1f;
 
         Cursor.visible = isPaused; // Mostrar u ocultar el cursor
+        Debug.Log("cursor visible");
         Cursor.lockState = isPaused ? CursorLockMode.None : CursorLockMode.Locked; // Desbloquear o bloquear el cursor
+        Debug.Log("cursor desbloqueado");
     }
 
     public void PlayGame()
