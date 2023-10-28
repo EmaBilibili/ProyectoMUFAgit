@@ -14,7 +14,7 @@ public class Raycast : MonoBehaviour
     private void Update()
     {
         RaycastHit hit;
-        isLightSwitcherHit = false; // Reiniciar la variable en cada actualización
+        isLightSwitcherHit = false; // Reiniciar la variable en cada actualizaciÃ³n
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, range))
         {
             if (hit.collider.GetComponent<LightSwitcher>() != null)
@@ -45,14 +45,14 @@ public class Raycast : MonoBehaviour
         {
             GUIStyle style = new GUIStyle(GUI.skin.label);
             style.alignment = TextAnchor.MiddleCenter;
-            style.fontSize = 34; // Tamaño de fuente más grande
+            style.fontSize = 34; // TamaÃ±o de fuente mÃ¡s grande
 
-            float messageWidth = 400; // Ancho del área de la etiqueta
-            float messageHeight = 100; // Alto del área de la etiqueta
+            float messageWidth = 400; // Ancho del Ã¡rea de la etiqueta
+            float messageHeight = 100; // Alto del Ã¡rea de la etiqueta
 
-            // Calcula la posición centrada en la parte inferior
+            // Calcula la posiciÃ³n centrada en la parte inferior
             float xPos = (Screen.width - messageWidth) / 2;
-            float yPos = Screen.height - messageHeight - 20; // 20 píxeles desde la parte inferior
+            float yPos = Screen.height - messageHeight - 20; // 20 pÃ­xeles desde la parte inferior
 
             Rect messageRect = new Rect(xPos, yPos, messageWidth, messageHeight);
 
