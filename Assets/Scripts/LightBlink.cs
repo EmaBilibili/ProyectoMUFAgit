@@ -6,6 +6,7 @@ public class LightBlink : MonoBehaviour
 {
     public bool titila = false;
     public float timeDelay;
+    public GameObject plane;
 
 
     // Update is called once per frame
@@ -20,9 +21,11 @@ public class LightBlink : MonoBehaviour
     {
         titila = true;
         this.gameObject.GetComponent<Light>().enabled = false;
+        plane.gameObject.SetActive(false);
         timeDelay = Random.Range(0.01f, 0.2f);
         yield return new WaitForSeconds(timeDelay);
         this.gameObject.GetComponent<Light>().enabled = true;
+        plane.gameObject.SetActive(true);
         timeDelay = Random.Range(0.01f, 0.2f);
         yield return new WaitForSeconds(timeDelay);
         titila = false;

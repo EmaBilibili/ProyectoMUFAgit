@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Enemigo : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class Enemigo : MonoBehaviour
     public Cinemachine.CinemachineVirtualCamera VCamEnemy;
 
     private bool EnemyMoving = true;
+
+    [SerializeField] private float WaitTime;
+    [SerializeField] public string SceneName;
 
     void Start()
     {
@@ -87,7 +91,17 @@ public class Enemigo : MonoBehaviour
             // Por ejemplo, reproducir una animación.
             anim.SetTrigger("ScreamAnimation");
 
+            // Cargar la escena principal después de un cierto tiempo (por ejemplo, después de que termine la animación).
+            Invoke("LoadScene", WaitTime);
+            
             EnemyMoving = false;
         }
+    }
+    
+    private void LoadScene()
+    {
+        // Carga la escena principal por su nombre o índice.
+        // Asegúrate de que el nombre de la escena sea correcto.
+        SceneManager.LoadScene(SceneName);
     }
 }
