@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class SanityScript : MonoBehaviour
 {
     public Image madnessImage;
+    public Image madnessImage2;
     public float initialMadness = 1.0f;
     public float madnessReductionRate = 0.2f;
     public float madnessIncreaseRate = 0.1f;
@@ -69,6 +70,10 @@ public class SanityScript : MonoBehaviour
         Color imageColor = madnessImage.color;
         imageColor.a = currentMadness;
         madnessImage.color = imageColor;
+        
+        Color imageColor2 = madnessImage2.color;
+        imageColor.a = currentMadness;
+        madnessImage2.color = imageColor;
 
         if (currentMadness >= madnessActivationThreshold && !enemyActivated)
         {
