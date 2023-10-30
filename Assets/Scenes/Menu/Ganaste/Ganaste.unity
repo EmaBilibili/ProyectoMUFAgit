@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 646207542}
   - component: {fileID: 646207541}
   m_Layer: 5
-  m_Name: Salir (1)
+  m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43e2a68d480f0084c8a4410912cf18a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2147eeb382a3cb34294f7f69190dde22, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

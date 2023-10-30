@@ -12,6 +12,8 @@ public class ChangeScene : MonoBehaviour
         if (other.CompareTag("Player")) // Cambia "Player" al tag de tu objeto si es diferente
         {
             SceneManager.LoadScene(nombreDeEscena);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
