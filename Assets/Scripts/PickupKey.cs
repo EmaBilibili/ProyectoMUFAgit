@@ -4,12 +4,14 @@ public class PickupKey : MonoBehaviour
 {
     private bool isInRange = false;
     public DoorLocked doorLocked;
+    public AudioSource keyPickupSound; // Agrega esta variable
 
     private void Update()
     {
         if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
             doorLocked.hasKey = true;
+            PlayKeyPickupSound(); // Llama a la función para reproducir el sonido
             gameObject.SetActive(false); // O puedes destruirla con Destroy(gameObject)
         }
     }
@@ -29,6 +31,13 @@ public class PickupKey : MonoBehaviour
         {
             isInRange = false;
             // Oculta el mensaje al jugador
+        }
+    }
+    private void PlayKeyPickupSound()
+    {
+        if (keyPickupSound != null)
+        {
+            keyPickupSound.Play();
         }
     }
 }

@@ -377,6 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openSound: {fileID: 8300000, guid: 6cc4537865ae1479b9e7ac12ab172909, type: 3}
   closeSound: {fileID: 8300000, guid: b88eb643c13ba4470b51a26e2823b565, type: 3}
+  interactionMessage: Pulsa 'E' para abrir la puerta
 --- !u!82 &737720482616602585
 AudioSource:
   m_ObjectHideFlags: 0
@@ -386,7 +387,8 @@ AudioSource:
   m_GameObject: {fileID: 2996594855667829126}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -7066522277676117919, guid: 1183dcce8ebc7a9428e213f3b30e645b,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

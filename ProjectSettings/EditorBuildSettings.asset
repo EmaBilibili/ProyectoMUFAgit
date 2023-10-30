@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TutorialScene/Tutorial.unity
+    guid: cd6a480c75b21474ca57671bd71d8630
+  - enabled: 1
     path: Assets/Scenes/Menu/Main Menu/MainMenu.unity
     guid: 388a36f3e8779044a918db7ae7750e77
   - enabled: 1
@@ -29,7 +32,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/Perdiste/PerdisteSotano.unity
     guid: c6275398994675e4e9515742d4bb4389
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Main Scene/MainScene2.unity
-    guid: 79fea673695f850498823d4e3ad94ebd
+    guid: cff2c2a55f25f0e408baaa35607567e7
+  - enabled: 1
+    path: Assets/Scenes/Menu/Perdiste/PerdisteMain2.unity
+    guid: a76ed6842eff67c468dc9409e7a6ed6a
   m_configObjects: {}

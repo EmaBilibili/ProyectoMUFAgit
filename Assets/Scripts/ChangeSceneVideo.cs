@@ -20,6 +20,8 @@ public class ChangeSceneVideo : MonoBehaviour
         {
             // Cambiar de escena al final del video
             SceneManager.LoadScene(sceneToLoad);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }

@@ -35,6 +35,14 @@ public class MenuManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
     
+    public void PlayMain2()
+    {
+        Debug.Log("cargando juego");
+        SceneManager.LoadScene("MainScene2");
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+    
     public void PlaySotano()
     {
         Debug.Log("cargando juego");
